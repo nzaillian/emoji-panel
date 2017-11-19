@@ -101,8 +101,12 @@ module.exports = {
         loader: ExtractTextPlugin.extract('style', 'css!absurd')
       },
       {
-        test: /\.(png|ttf)$/,
+        test: /\.ttf$/,
         loader: 'file?name=./asset/[name].[ext]'
+      },
+      {
+        test: /\.png$/,
+        loader: 'file?name=./asset/[path][name].[ext]'
       }
     ]
   },

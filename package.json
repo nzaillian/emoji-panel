@@ -34,7 +34,11 @@
   "author": "unimonkiez",
   "license": "MIT",
   "dependencies": {
-    "emoji-datasource": "3.0.x"
+    "emoji-datasource": "3.0.x",
+    "emoji-datasource-apple": "3.0.x",
+    "emoji-datasource-emojione": "3.0.x",
+    "emoji-datasource-google": "3.0.x",
+    "emoji-datasource-twitter": "3.0.x"
   },
   "devDependencies": {
     "absurd": "^0.3.34",
