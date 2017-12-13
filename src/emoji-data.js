@@ -7,6 +7,11 @@ const sortedEmojiData = emojiData
   .reduce((obj, emoji) => {
     const category = categoryDataMap[emoji.category];
     const categoryArray = obj[category] || [];
+
+    if (emoji.obsoleted_by) {
+      return obj;
+    }
+
     return Object.assign(obj, {
       [category]:  categoryArray.concat(emoji)
     });
