@@ -1,4 +1,5 @@
 import { getIsElementScrollable, scrollElementTo, slideToCategory } from './set-events-for-template-helpers';
+import { nameMap } from './map';
 
 export default (el, { animationDuration, eventListeners } = {}) => {
   const panelVariables = {
@@ -7,6 +8,7 @@ export default (el, { animationDuration, eventListeners } = {}) => {
 
   const categoriesEl = el.querySelector('.ep-categories');
   const slideEl = el.querySelector('.ep-slide');
+  const searchInput = el.querySelector('.ep-search-input');
   const emojiesContainerEl = el.querySelector('.ep-emojies');
 
   // Set styles
@@ -48,6 +50,13 @@ export default (el, { animationDuration, eventListeners } = {}) => {
         }
       }
     }
+  });
+
+  searchInput.addEventListener('input', e => {
+    const searchTerm = searchInput.value;
+    const nm = nameMap;
+    debugger
+    console.log(searchTerm);
   });
 
   emojiesContainerEl.addEventListener('scroll', scrollListener);

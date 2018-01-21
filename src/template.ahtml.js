@@ -22,6 +22,11 @@ module.exports = api => {
           }
         }), {})
       ],
+      'div[class="ep-search"]': [
+        {
+          'input[type="text" class="ep-search-input"]': ''
+        }
+      ],
       'div[class="ep-emojies"]': categoryOrder.reduce((catObj, category) => Object.assign(catObj, {
         [`div[class="ep-emojies-c" data-category-id="${category}"]`]: emojiData[category].reduce((emojiObj, emoji) => Object.assign(emojiObj, {
           [`span[class="ep-e" data-index="${emoji.index}" data-unified="${emoji.unified}"]`]: ''

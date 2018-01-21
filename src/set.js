@@ -1,6 +1,7 @@
 'use strict';
 
 const emojiData = require('./emoji-data');
+debugger
 const categoryOrder = require('./category-order');
 const Constant = require('./constant');
 const Map = require('./map');

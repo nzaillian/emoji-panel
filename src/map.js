@@ -32,4 +32,16 @@ const sizeMap = {
   '4': 64
 };
 
-module.exports = { categoryDataMap, categoryNameMap, sizeMap };
+const nameMap = (() => {
+  const emojiData = require('emoji-datasource');
+  const mapping = {};
+  for (let i = 0; i < emojiData.length; i++) {
+    const item = emojiData[i];
+    if (item.name) {
+      mapping[item.name.toLowerCase()] = item;
+    }
+  }
+  return mapping;
+})();
+
+module.exports = { nameMap, categoryDataMap, categoryNameMap, sizeMap };
